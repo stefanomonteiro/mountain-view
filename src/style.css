@@ -1,0 +1,243 @@
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.painting {
+  /* height: 100vh; */
+  width: 100%;
+  position: relative;
+  
+}
+/* Sun */
+.painting::before {
+  content: "";
+  height: 1000px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 0, 0.9) 1%,
+    rgba(255, 255, 0, 0.7) 3%,
+    rgba(255, 255, 255, 0.4) 10%,
+    transparent,
+    transparent
+  );
+  transform: translateY(-50%) translateX(0) rotate(0deg);
+  transform-origin: bottom;
+  animation: sunRotation $mainAnimation;
+}
+
+/* Sky */
+.painting::after{
+  content: "";
+  height: 20000px;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background: linear-gradient(
+    to bottom,
+    black,
+    darkblue,
+    skyblue,
+    skyblue,
+    orange,
+    darkblue,
+    black
+  );
+  animation: sky $mainAnimation;
+}
+
+
+
+.mountains__svg {
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+}
+
+
+.mountains__right-side {
+  fill: #d5b5d6;
+}
+.mountains__left-side--light {
+  fill: #a39bc6;
+}
+.mountains__left-side--medium {
+  fill: #9b96c2;
+}
+.mountains__left-side--dark {
+  fill: #8c89b9;
+}
+.mountains__bottom {
+  fill: #7a84b8;
+}
+.mountains__left-side--extra-dark {
+  fill: #877cb1;
+}
+.leaves-reflex {
+  fill: #ceafb1;
+}
+
+
+/* Forest */
+.forest__top-layer {
+  fill: #6a71a9;
+}
+/* and birds */
+.forest__second-layer {
+  fill: #4f558c;
+}
+.forest__third-layer {
+  fill: #46486e;
+}
+.forest__fourth-layer--right {
+  fill: #3d426f;
+}
+.forest__fifth-layer--bottom {
+  fill: #44405c;
+}
+.forest__sixth-layer {
+  fill: #393c67;
+}
+.forest__seventh-layer--left {
+  fill: #443d56;
+}
+.forest__seventh-layer--right {
+  fill: #383957;
+}
+.forest__eigth-layer--left {
+  fill: #453647;
+}
+.forest__nineth-layer--left {
+  fill: #44313c;
+}
+.forest__nineth-layer--right {
+  fill: #34324a;
+}
+.forest__tenth-layer--left {
+  fill: #422d38;
+}
+.forest__tenth-layer--right {
+  fill: #2d2d42;
+}
+.forest__eleventh-layer--left {
+  fill: #352b3a;
+}
+.forest__eleventh-layer--right {
+  fill: #2d2d42;
+}
+
+
+/* Clouds */
+
+.cloud__one,
+.cloud__two,
+.cloud__three,
+.cloud__four,
+.cloud__five,
+.cloud__six {
+  fill: #ffff;
+}
+
+.cloud__one {
+  animation: cloudOne 5s infinite;
+  animation: cloudColor $mainAnimation;
+}
+.cloud__two {
+  animation: cloudOne 5s infinite;
+  animation: cloudColor $mainAnimation;
+}
+.cloud__three {
+  animation: cloudTwo 5s infinite;
+  animation: cloudColor $mainAnimation;
+}
+.cloud__four {
+  animation: cloudTwo 5s infinite;
+  animation: cloudColor $mainAnimation;
+}
+.cloud__five {
+  animation: cloudThree 5s infinite;
+  animation: cloudColor $mainAnimation;
+}
+.cloud__six {
+  animation: cloudThree 5s infinite;
+  animation: cloudColor $mainAnimation;
+}
+
+
+
+/* Animations */
+
+@keyframes svg {
+  from {
+    fill: white;
+  }
+  to {
+    fill: green;
+  }
+}
+
+@keyframes sunRotation {
+  from {
+    transform: translateY(-50%) translateX(-30%) rotate(-100deg);
+  }
+  to {
+    transform: translateY(-50%) translateX(30%) rotate(100deg);
+  }
+}
+
+@keyframes sky{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-90%);
+  }
+
+}
+
+@keyframes cloudOne {
+  0%,
+  100% {
+    transform: translate(-0.1%, -0.1%);
+  }
+  50% {
+    transform: translate(0.1%, 0.1%);
+  }
+}
+@keyframes cloudTwo {
+  0%,
+  100% {
+    transform: translate(0.1%, 0.1%);
+  }
+  50% {
+    transform: translate(-0.1%, -0.1%);
+  }
+}
+@keyframes cloudThree {
+  0%,
+  100% {
+    transform: translate(-0.1%, 0%);
+  }
+  50% {
+    transform: translate(0.1%, 0.1%);
+  }
+}
+
+@keyframes cloudColor{
+  0%, 100%{
+    fill: gray;
+  }
+  25%,75%{
+    fill: white;
+  }
+}

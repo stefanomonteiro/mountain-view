@@ -1,0 +1,90 @@
+.mountains__right-side {
+  fill: #d5b5d6;
+  @include mountainRightSide(#d5b5d6, right-side);
+}
+.mountains__left-side--light {
+  fill: #a39bc6;
+  @include mountainLeftSide(#a39bc6, left-side--light);
+}
+.mountains__left-side--medium {
+  fill: #9b96c2;
+  @include mountainLeftSide(#9b96c2, left-side--medium);
+}
+.mountains__left-side--dark {
+  fill: #8c89b9;
+  @include mountainLeftSide(#8c89b9, left-side--dark);
+}
+.mountains__bottom {
+  fill: #7a84b8;
+  @include forest(#7a84b8, mountains__bottom);
+}
+.mountains__left-side--extra-dark {
+  fill: #877cb1;
+  @include mountainLeftSide(#877cb1, left-side--extra-dark);
+}
+.leaves-reflex {
+  fill: transparent;
+}
+
+/* Forest */
+.forest__top-layer {
+  fill: #6a71a9;
+  @include forest(#6a71a9, forest__top-layer);
+}
+/* and birds */
+.forest__second-layer {
+  fill: #4f558c;
+  @include forest(#4f558c, forest__second-layer);
+}
+.forest__third-layer {
+  fill: #46486e;
+  @include forest(#46486e, forest__third-layer);
+}
+.forest__fourth-layer--right {
+  fill: #3d426f;
+  @include forest(#3d426f, forest__fourth-layer--right);
+}
+.forest__fifth-layer--bottom {
+  fill: #44405c;
+  @include forestBottomLayers(#44405c, forest__fifth-layer--bottom);
+}
+.forest__sixth-layer {
+  fill: #393c67;
+  @include forestBottomLayers(#393c67, forest__sixth-layer);
+}
+.forest__seventh-layer--left {
+  fill: #443d56;
+  @include forestBottomLayers(#443d56, forest__seventh-layer--left);
+}
+.forest__seventh-layer--right {
+  fill: #383957;
+  @include forestBottomLayers(#383957, forest__seventh-layer--right);
+}
+.forest__eigth-layer--left {
+  fill: #453647;
+  @include forest(#453647, forest__eigth-layer--left);
+}
+.forest__nineth-layer--left {
+  fill: #44313c;
+  @include forest(#44313c, forest__nineth-layer--left);
+}
+.forest__nineth-layer--right {
+  fill: #34324a;
+  @include forest(#34324a, forest__nineth-layer--right);
+}
+.forest__tenth-layer--left {
+  fill: #422d38;
+  @include forest(#422d38, forest__tenth-layer--left);
+}
+.forest__tenth-layer--right {
+  fill: #2d2d42;
+  @include forest(#2d2d42, forest__tenth-layer--right);
+}
+.forest__eleventh-layer--left {
+  fill: #352b3a;
+  @include forest(#352b3a, forest__eleventh-layer--left);
+}
+.forest__eleventh-layer--right {
+  fill: #2d2d42;
+  @include forest(#2d2d42, forest__eleventh-layer--right);
+}

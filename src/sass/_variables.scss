@@ -1,0 +1,101 @@
+$mainAnimation: 60s 1s both infinite linear;
+// $playState: paused;
+$playState: running;
+
+$size: 100vw;
+
+//Star Colors
+$blueStar: rgba(155, 208, 229, 0.9);
+$whiteStar: rgba(255, 255, 255, 0.9);
+$redStar: rgba(243, 187, 187, 0.9);
+
+@mixin mountainRightSide($fill, $animationName) {
+  animation: $animationName $mainAnimation $playState;
+  @keyframes #{$animationName} {
+    0%,
+    15%,
+    75%,
+    100% {
+      fill: darken(adjust-hue(saturate($fill, 0%), -50%), 50%);
+    }
+    33% {
+      fill: darken(adjust-hue(saturate($fill, 0%), -35%), 40%);
+    }
+    50% {
+      fill: darken(adjust-hue(saturate($fill, 0%), 0%), 0%);
+    }
+    65% {
+      fill: darken(adjust-hue(saturate($fill, 0%), 0%), 20%);
+    }
+  }
+}
+
+@mixin mountainLeftSide($fill, $animationName) {
+  animation: $animationName $mainAnimation $playState;
+  @keyframes #{$animationName} {
+    0%,
+    15%,
+    75%,
+    100% {
+      fill: darken(adjust-hue(saturate($fill, 10%), 0%), 50%);
+    }
+    45%,
+    55% {
+      fill: darken(adjust-hue(saturate($fill, 10%), 30%), 0%);
+    }
+    60% {
+      fill: darken(adjust-hue(saturate($fill, 0%), 20%), 10%);
+    }
+    65% {
+      fill: darken(adjust-hue(saturate($fill, 10%), 0%), 20%);
+    }
+  }
+}
+
+@mixin forest($fill, $animationName) {
+  animation: $animationName $mainAnimation $playState;
+  @keyframes #{$animationName} {
+    0%,
+    25%,
+    75%,
+    100% {
+      fill: darken(adjust-hue(saturate($fill, 0%), 0%), 50%);
+    }
+
+    45%,
+    60% {
+      fill: darken(adjust-hue(saturate($fill, 20%), -80%), 30%);
+    }
+    70% {
+      fill: darken(adjust-hue(saturate($fill, 20%), -80%), 50%);
+    }
+  }
+}
+
+@mixin forestBottomLayers($fill, $animationName) {
+  animation: $animationName $mainAnimation $playState;
+  @keyframes #{$animationName} {
+    0%,
+    35%,
+    75%,
+    100% {
+      fill: darken($fill, 30%);
+    }
+    45%,
+    65% {
+      fill: darken($fill, 25%);
+    }
+  }
+}
+
+@mixin starBuild($childNum, $color, $size, $posX, $posY, $animationName) {
+  .stars span:nth-child(#{$childNum}) {
+    background: radial-gradient(
+      circle at $posX $posY,
+      $color $size,
+      transparent $size,
+      transparent
+    );
+    animation: $animationName 5s infinite;
+  }
+}

@@ -1,0 +1,27 @@
+.cloud__one,
+.cloud__two,
+.cloud__three,
+.cloud__four,
+.cloud__five,
+.cloud__six {
+  fill: #ffff;
+}
+
+.cloud__one {
+  animation: cloudOne 5s infinite, cloudColor $mainAnimation;
+}
+.cloud__two {
+  animation: cloudOne 5s infinite, cloudColor $mainAnimation;
+}
+.cloud__three {
+  animation: cloudTwo 5s infinite, cloudColor $mainAnimation;
+}
+.cloud__four {
+  animation: cloudTwo 5s infinite, cloudColor $mainAnimation;
+}
+.cloud__five {
+  animation: cloudThree 5s infinite, cloudColor $mainAnimation;
+}
+.cloud__six {
+  animation: cloudThree 5s infinite, cloudColor $mainAnimation;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "dinamic_painting",
+  "version": "1.0.0",
+  "description": "SVG and CSS Animation",
+  "main": "index.js",
+  "scripts": {
+    "webpackDev": "webpack --mode=development --watch",
+    "webpackProd": "webpack --mode=production"
+  },
+  "author": "Stefano Monteiro",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-partials-plugin": "^0.5.1",
+    "html-webpack-plugin": "^4.0.0-beta.4",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "webapp-webpack-plugin": "^2.4.0",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
